@@ -1,0 +1,51 @@
+document.getElementById("welcome").innerHTML=
+"Selamat datang, "+localStorage.getItem("username");
+
+}
+
+
+
+function profil(){
+
+let user=localStorage.getItem("username");
+
+let role=localStorage.getItem("role");
+
+let expired=localStorage.getItem("expired");
+
+
+document.getElementById("profilData").innerHTML=
+
+`
+<div class="menu">
+
+<h3>👤 PROFIL</h3>
+
+<p>Username: ${user}</p>
+
+<p>Role: ${role}</p>
+
+<p>Expired: ${expired}</p>
+
+<p>Status: Aktif</p>
+
+</div>
+`;
+
+}
+
+
+
+function logout(){
+
+document.getElementById("dashboard").style.display="none";
+
+document.getElementById("login").style.display="block";
+
+}
+
+</script>
+
+
+</body>
+</html>
